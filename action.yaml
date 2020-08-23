@@ -1,0 +1,11 @@
+name: 'SLURM Batch Job Submitter'
+description: 'Submits batch jobs from root of directory using SLURM'
+inputs:
+  FILENAME:
+    description: 'Name (or path) of job file'
+    required: true
+    default: 'job.sb' 
+runs:
+  steps: 
+    - run: sbatch ${{ inputs.FILENAME }}.
+      shell: bash
