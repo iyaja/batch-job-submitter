@@ -5,6 +5,9 @@ inputs:
     description: 'Name (or path) of job file'
     required: true
     default: 'job.sb' 
+branding:
+  color: 'black'
+  icon: 'activity'
 runs:
   steps: 
     - run: sbatch ${{ inputs.FILENAME }}.
